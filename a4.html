@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project v.3</title>
+
+    <link href = "a4.css" rel = "stylesheet">
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script> 
+    <script src="jquery.masonry.min.js"></script> 
+    <script src="jquery.imagesloaded.min.js"></script> 
+    <script>
+   $(document).ready(function () {
+            // 풀다운 메뉴
+            $('.outer-menu').hover(function () {
+                $(this).find('.inner-menu').css('display', 'block');
+            }, function () {
+                $(this).find('.inner-menu').css('display', 'none');
+            });
+        });
+
+        // 페이지
+        $(document).ready(function () {
+            // 이미지 로드 확인
+            $('#content').imagesLoaded(function () {
+                // jQuery Masonry 플러그인 적용
+                $('#content').masonry({
+                    itemSelector: '.paper',
+                    columnWidth:270,
+                    isAnimated: true
+                });
+            });
+});
+          
+        
+        // 라이트 박스
+        $(document).ready(function () {
+            function showLightBox() {
+                // 라이트박스를 보이게 합니다.
+                $('#darken-background').show();
+                $('#darken-background').css('top', $(window).scrollTop());
+                // 스크롤을 못하게 합니다.
+                $('body').css('overflow', 'hidden');
+            }
+
+            function hideLightBox() {
+                // 라이트박스를 안 보이게 합니다.
+                $('#darken-background').hide();
+
+                // 스크롤을 하게 합니다.
+                $('body').css('overflow', '');
+            }
+
+            // 라이트박스 제거 이벤트
+            $('#darken-background').click(function () {
+                hideLightBox();
+            });
+
+              // 클릭 이벤트 연결
+            $('.paper').click(function () {
+                showLightBox();
+            });
+
+            // 라이트박스 제거 이벤트 보조
+            $('#lightbox').click(function (event) {
+                event.stopPropagation()
+            });
+        });
+    </script> 
+
+</head>
+<body>
+    <div class = "container">
+        <!-- 맨 위의 로고 -->
+               <header id = "header-logo">
+                   <img src= "/image/logo.png" alt = "로고"  width ="40%">
+    
+                   <audio src="/audio/[MV] IU(아이유)Blueming(블루밍).mp3" controls="controls" class="s_right"></audio> 
+                </header>
+    
+                <!-- 네비게이션 바 -->
+                 <nav id= "nav_manu">
+                     <div class = "nav_box">
+                      <ul class= "menu" >
+                        <div> <li class="s_left"><a href = "http://127.0.0.1:5501/">HOME</a></li></div>
+                        <div> <li class="s_left"><a href = "http://127.0.0.1:5501/a2.html">TRANNING</a></li></div>
+                        <div> <li class="s_left"><a href = "http://127.0.0.1:5501/a3.html">PRODUCT</a></li></div>
+                        <div> <li class="s_left"><a href = "http://127.0.0.1:5501/a4.html">COMMUNITY</a></li></div>
+                        <div> <li class="s_left"><a href = "http://127.0.0.1:5501/a5.html">MY PAGE</a></li></div>
+                      </ul>
+                    </div>
+                 </nav>
+                 <!-- 본문 내용 -->
+                 <section>
+                <div  id="content">
+                 <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/001.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width="30px"/></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/002.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/003.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/004.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/005.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/006.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/007.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/008.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/009.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/010.jpeg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/011.jpeg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/012.jpeg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/013.jpeg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/014.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/015.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/016.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/018.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/017.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/019.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+                <div class="paper"> 
+                    <div class="paper-holder"> 
+                        <a><img width="235" src="/image/020.jpg" /></a> 
+                    </div> 
+                     
+                    <div class="paper-content"> 
+                        <a class="paper-link" href="#"><img src="/image/사람.jpg" width = "30px" /></a> 
+                     
+                    </div> 
+                </div> 
+                 
+            </section> 
+            <!-- 라이트박스 --> 
+            <div id="darken-background"> 
+                <div id="lightbox"> 
+                    <div class="user-information"> 
+                        <a class="" href="#"><img src="/image/사람.jpg" width="30px"/></a> 
+                    </div> 
+                    <img src="/image/001.jpg" /> 
+                </div> 
+            </div> 
+        </div>
+            <footer>
+                <div id = "box" class="s_left"></div>
+            </footer>
+              
+ </div>
+</body>
+</html>

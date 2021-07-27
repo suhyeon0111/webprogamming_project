@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이수현-v2</title>
+        <link href = "test.css" rel = "stylesheet">
+    <script src = "https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        window.onload= function() {
+            // 글자조작
+          var string = "happy";
+          var res = str.replace("happy", "happy animal");
+            // 스타일 조작
+            document.body.style['backgroundColor']=rgb(254, 255, 209);
+            // 속성조작
+
+            var image = document.getElementById('Image');
+
+            image.src = 'foot.png';
+            image.winth = 30
+            //이벤트 기능
+            // var button = document.getElementById('button');
+            // button.click=function(){
+            //     return false;
+            // };
+    
+        
+        };
+
+    </script>
+
+    <!-- <script>
+        $(document).ready(function(){
+            $('a').click(function(event){
+                alert('click');
+                event.preventDefault();
+            });
+        });
+        
+    </script> -->
+    <!-- 움직이는 박스 애니메이션 -->
+    <script>
+        $(document).ready(function(){
+            $('#box').css({
+                width:1200,
+                height:50,
+                backgroundColor:'skyblue' 
+            }).animate({
+                width:0,
+                opacity: 0.5,
+            }, 500);
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#project').hover(function(){
+               $(this).css({
+                    color:'white'
+               });
+            },function(){
+                $(this).css({
+                    color: ''
+                });
+        });
+    });
+    </script>
+</head>
+<body >
+    <div class = "container">
+    <!-- 맨 위의 로고 -->
+           <header id = "header-logo">
+               <img src= "/image/logo.png" alt = "로고"  width ="40%">
+
+               <audio src="/audio/[MV] IU(아이유)Blueming(블루밍).mp3" controls="controls" class="s_right"></audio> 
+            </header>
+
+            <!-- 네비게이션 바 -->
+             <nav id= "nav_manu">
+                 <div class = "nav_box">
+                  <ul class= "menu" >
+                     <div> <li class="s_left"><a href = "http://127.0.0.1:5501/">HOME</a></li></div>
+                     <div> <li class="s_left"><a href = "http://127.0.0.1:5501/a2.html">TRANNING</a></li></div>
+                     <div> <li class="s_left"><a href = "http://127.0.0.1:5501/a3.html">PRODUCT</a></li></div>
+                     <div> <li class="s_left"><a href = "http://127.0.0.1:5501/a4.html">COMMUNITY</a></li></div>
+                     <div> <li class="s_left"><a href = "http://127.0.0.1:5501/a5.html">MY PAGE</a></li></div>
+                  </ul>
+                </div>
+             </nav>
+                   <!-- 중간 박스들 -->
+            <section>
+                <div id = "content">
+                    <div id = "box" class="s_left"></div>
+                    <!-- <a id = "button" href = "http://royalcaninevent2020.com/breed/?utm_source=naver&utm_medium=cpc&utm_campaign=Dog_Products_Products_Info&utm_content=Campaign&utm_term=%EA%B0%95%EC%95%84%EC%A7%80">사료 전문 사이트</a> -->
+                    <!-- 가운데 배경 이미지 -->
+                    <div id = "back_image"><img src = "/image/배경.jpg"  width = "100%" alt = ""></div>
+               
+                <!-- 제품추천박스 -->
+                <div id = "product" ><h3>제품추천</h3><img src="/image/제품추천.png" width="100%"></div> 
+                <!-- 동영상박스 -->
+               <div id = "videobox"> <video src= "/video/강형욱.mp4" controls= "controls" width="48%" class = "s_right"></video></div>
+       <!-- 후원금 박스 -->
+                 <div id = "money" class = "s_right">나의 후원금<br>
+                    <h1>10000won</h1>
+                </div>
+                </div>
+            </section>
+               
+            <footer>
+                <div id = "box" class="s_left"></div>
+                <!-- <a id = "project" href="#">프로젝트 사이트</a> -->
+            </footer>
+              
+        
+    </div>
+</body>
+</html>
